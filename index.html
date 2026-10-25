@@ -1,288 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ТРЦ "Авиатор"</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ТРЦ «Авиатор» — более 30 магазинов у метро Тушинская</title>
+  <meta name="description" content="ТРЦ «Авиатор» в Москве: более 30 магазинов, парковка на 130 машин, 500 метров от м. Тушинская. Аренда торговых площадей.">
+  <meta name="theme-color" content="#0d0f14">
+  <meta property="og:title" content="ТРЦ «Авиатор»">
+  <meta property="og:description" content="Более 30 магазинов у метро Тушинская. Ежедневно с 08:00 до 23:00.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.svg" alt="" width="50px">
-        </div>
+  <header class="topbar">
+    <a class="brand" href="#top"><img src="images/logo.svg" alt="Логотип ТРЦ Авиатор" width="40" height="40"><span>Авиатор</span></a>
+    <nav>
+      <a href="#shops">Магазины</a>
+      <a href="#rent">Арендаторам</a>
+      <a href="#map">Как добраться</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-    </header>
-    <div class="header-text">
-        <h1>ТРЦ "Авиатор"</h1>
-        <p>В нашем ТРЦ более 30 магазинов</p>
-    <div class="adaptivny-slayder">
-        <input type="radio" name="kadoves" id="slaid1" checked>
-        <input type="radio" name="kadoves" id="slaid2">
-        <input type="radio" name="kadoves" id="slaid3">
+  <main id="top">
+    <section class="hero">
+      <h1>ТРЦ «Авиатор»</h1>
+      <p>Более 30 магазинов в шаговой доступности от метро Тушинская</p>
+      <div class="hero-badges">
+        <span>Ежедневно 08:00–23:00</span>
+        <span>Парковка на 130 мест</span>
+        <span>500 м от м. Тушинская</span>
+      </div>
+    </section>
 
-        <div class="kadoves">
-            <label for="slaid1"></label>
-            <label for="slaid2"></label>
-            <label for="slaid3"></label>
-        </div>
+    <section class="slider" aria-label="Фотографии ТРЦ">
+      <div class="slides" id="slides"></div>
+      <div class="dots" id="dots"></div>
+    </section>
 
-        <div class="adaptivny-slayder-lasekun">
-            <div class="abusteku-deagulus">
-                <img src="images/4503599659366204_bd4e.jpeg" />
-                <img src="images/Pictureы.png" />
-                <img src="images/Picture1ыыpng.png" />
-            </div>
-        </div>
-    </div>
+    <section id="shops" class="section">
+      <h2>Магазины и услуги</h2>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Поиск: одежда, аптека, кофе…" aria-label="Поиск по магазинам">
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Ничего не найдено. Попробуйте другой запрос.</p>
+      <noscript><p class="empty">Для списка магазинов включите JavaScript.</p></noscript>
+    </section>
 
-    </div>
-    <div class="main-text">
-        <h1>Категории магазинов</h1>
-    </div>
-    <div class="main">
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-0cegGCRt8GleKNY7.png" alt="">
-            <h1>Одежда</h1>
-            <p>
-                <a href="https://www.famil.ru/??&&">Familia</a>, Мужская одежда, Женская одежда, <a href="https://smeshnie-ceny.ru/">Смешные цены</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-xEOMXOkZmvvf.png" alt="">
-            <h1>Парфюмерия и косметика</h1>
-            <p><a href="https://magnitcosmetic.ru/">Магнит косметик</a>, <a href="https://tiande.ru/">TianDe</a>, Parfum Mastery
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-IXwFb20wcK.png" alt="">
-            <h1>Железнодорожные и авиабилеты</h1>
-            <p>Авиакассы
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-VIHkAbnw9YD.png" alt="">
-            <h1>Секонд-хэнд</h1>
-            <p> <a href="https://s-garderob.ru/">Столичный гардероб</a> , <a href="http://super-hand.su/">Суперхенд</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-eP9kU66ty9xpVP8.png" alt="">
-            <h1>Агентство недвижимости</h1>
-            <p> <a href="http://s-ochag.ru/">Семейный очаг</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-521DFASPcM4.png" alt="">
-            <h1>Аниме-магазин</h1>
-            <p> <a href="https://nyapi.ru/">Аниме магазин Няпи: дакимакура, фигурки, манга</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-MzmxUNpOEBvAk.png" alt="">
-            <h1>Аптека</h1>
-            <p> <a href="https://aptechestvo.ru/">Аптечество</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-b9etdcgrXXbD9.png" alt="">
-            <h1>Банк</h1>
-            <p> <a href="https://unistream.ru/online/context_brand/?utm_source=yadirect&utm_medium=cpc&utm_campaign=poisk_unistream_msk&utm_term=%D0%AE%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%BC&utm_content=desktop&etext=2202.MSErFyzbXlRkYNmGSIx9JYr8n9eR4TmKihc6j-WQrKR1eG9wYmVsY3ZiZ3BndnVk.9696a2c93a991bacd0ee5ce7e3dca9c2f472cb04&yclid=3142205743612089480">Юнистрим</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-YuN4RkCQadYBw.png" alt="">
-            <h1>Букмекерская контора
-            </h1>
-            <p> <a href="https://betcity.ru/">БЕТСИТИ</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-5Aw46IKlsEgaTLX.png" alt="">
-            <h1>Кальян-бар</h1>
-            <p> <a href="https://alphalounge.ru/">Кальянная Альфа Лаундж</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-NEVXN98luPxp7rek.png" alt="">
-            <h1>Кофейня</h1>
-            <p> <a href="https://cofix.global/ru-ru/main/moscow/">Cofix</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-PkHrLbFQm0s4wp.png" alt="">
-            <h1>Лотереи</h1>
-            <p> <a href="https://www.stoloto.ru/">Столото</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-l7KPuujJ8JRy.png" alt="">
-            <h1>Магазин белья и купальников</h1>
-            <p>Бельё мое
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-EzgMe4jimw.png" alt="">
-            <h1>Магазин верхней одежды</h1>
-            <p> Магазин верхней одежды
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-kPcU1BeKZBWr5I.png" alt="">
-            <h1>Магазин ковров
-            </h1>
-            <p>1000 и 1 ковер
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-12svEKfLSZHW8.png" alt="">
-            <h1>Магазин обуви</h1>
-            <p>Магазин обуви
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-ytfn9ndP5WHun4.png" alt="">
-            <h1>Магазин сумок и чемоданов</h1>
-            <p> <a href="https://www.pola.ru/">Pola</a>
-            </p>
-        </div>
-        <div class="icon">
-            <img src="images/imgonline-com-ua-Resize-rz6yPAfxBMEWGc.png" alt="">
-            <h1>Меховая компания</h1>
-            <p>В шубе</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-3uyRd1Aqkg2zX.png" alt=" ">
-            <h1>Парики, накладные пряди, волосы для наращивания
-            </h1>
-            <p>ШикПарик
-            </p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-hdlTMOMEUC.png " alt=" ">
-            <h1>Полиграфические услуги</h1>
-            <p>Печатный сервис
-            </p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-zhlevENC2f5mPUQq.png" alt=" ">
-            <h1>Религиозные товары</h1>
-            <p>Хранителъ
-            </p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-netoJiBHZhndukB (1).png" alt=" ">
-            <h1>Ремонт одежды</h1>
-            <p>Ремонт одежды</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-b8wUMusrb47UP571.png" alt=" ">
-            <h1>Ремонт часов</h1>
-            <p> <a href="https://master-sk.ru/">Shoes and key</a> </p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-kQ15t2Gq4OU4u.png" alt=" ">
-            <h1>Салон оптики</h1>
-            <p><a href="https://grand-opt.ru">
-                    Гранд оптика</a></p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-wr65fMRh7Atu.png" alt=" ">
-            <h1>Строительная экспертиза и технадзор</h1>
-            <p>Экспертиза Строительства М</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-LQua6HfpsNe.png" alt=" ">
-            <h1>Супермаркет</h1>
-            <p> <a href="http://atak.testeam.ru/">Атак</a></p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-3UC2cwJbR2CmL.png" alt=" ">
-            <h1>Товары для мобильных телефонов</h1>
-            <p>Магазин товаров для мобильных телефонов</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-H631H9gQYkT9wB2e.png" alt=" ">
-            <h1>Трикотаж, трикотажные изделия</h1>
-            <p>Магазин трикотажных изделий</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-FN6s3WHIIIEXl.png" alt=" ">
-            <h1>Фотоуслуги</h1>
-            <p>Фотоуслуги</p>
-        </div>
-        <div class="icon ">
-            <img src="images/imgonline-com-ua-Resize-oe9d3tFhL3Xv.png" alt=" ">
-            <h1>Шторы, карнизы</h1>
-            <p> <a href="https://ru.rozavilla.com/">Розавилла</a> </p>
-        </div>
+    <section id="rent" class="section">
+      <h2>Арендаторам</h2>
+      <p class="lead">Наши преимущества:</p>
+      <div class="adv">
+        <div class="adv-item"><b>Выгодное расположение</b><p>500 метров от м. Тушинская, ж/д станции Тушино и автостанции Тушинская. Первая линия домов.</p></div>
+        <div class="adv-item"><b>5000 человек в час</b><p>Густонаселённый район и высокий пешеходный трафик.</p></div>
+        <div class="adv-item"><b>Наружная реклама</b><p>Удобно разместить рекламу на ограждении, на здании и на билборде у оживлённой улицы с удобным подъездом.</p></div>
+        <div class="adv-item"><b>Парковка</b><p>130 машиномест для ваших клиентов.</p></div>
+      </div>
+    </section>
 
-    </div>
-    <hr>
-    <div class="main-text">
-        <div class="div">
-            <p>Арендаторы</p>
-        </div>
-        <h1>Отдел "Арендаторам"</h1>
-        <p>Наши преимущества:</p>
-    </div>
-    <div class="nazvanie">
-        <p><span>✓</span>Гарантированный большой поток клиентов за счет выгодного расположения – 500 метров от м.Тушинская; ж/д станции Тушино и Автостанции Тушинская; первая линия домов;</p>
-        <p><span>✓</span>Густонаселенный район - Высокий пешеходный трафик (5000 человек в час!) ;</p>
-        <p><span>✓</span>Удобство размещения наружной рекламы (на ограждение, самом здании, билборд по улице с большим пассажиропотоком и удобным подъездом);</p>
-        <p><span>✓</span>Парковка на 130 машиномест</p>
-    </div>
-    <!-- <div class="yandex" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/aviator/176299533868/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Авиатор</a><a href="https://yandex.ru/maps/213/moscow/category/shopping_mall/184108083/?utm_medium=mapframe&utm_source=maps"
-                style="color:#eee;font-size:12px;position:absolute;top:14px;">Торговый центр в Москве</a><iframe src="https://yandex.ru/map-widget/v1/-/CWTrA29k" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> -->
-    <div class="twogis"> <a class="dg-widget-link" href="http://2gis.ru/moscow/firm/70000001027245041/center/37.44488239288331,55.82779320816383/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Москвы</a>
-        <div class="dg-widget-link"><a href="http://2gis.ru/moscow/firm/70000001027245041/photos/70000001027245041/center/37.44488239288331,55.82779320816383/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div>
-        <div class="dg-widget-link"><a href="http://2gis.ru/moscow/center/37.44488,55.82735/zoom/16/routeTab/rsType/bus/to/37.44488,55.82735╎Авиатор, торговый центр?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Авиатор, торговый центр</a></div>
+    <section id="map" class="section">
+      <h2>Как добраться</h2>
+      <div class="map-links">
+        <a href="https://2gis.ru/moscow/firm/70000001027245041" target="_blank" rel="noopener">Открыть в 2ГИС</a>
+        <a href="https://2gis.ru/moscow/firm/70000001027245041/photos/70000001027245041" target="_blank" rel="noopener">Фотографии</a>
+      </div>
+      <div class="map-box">
         <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
         <script charset="utf-8">
-            new DGWidgetLoader({
-                "width": 640,
-                "height": 600,
-                "borderColor": "#a3a3a3",
-                "pos": {
-                    "lat": 55.82779320816383,
-                    "lon": 37.44488239288331,
-                    "zoom": 16
-                },
-                "opt": {
-                    "city": "moscow"
-                },
-                "org": [{
-                    "id": "70000001027245041"
-                }]
-            });
-        </script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+          new DGWidgetLoader({"width":"100%","height":480,"borderColor":"#2a2f3a","pos":{"lat":55.82779320816383,"lon":37.44488239288331,"zoom":16},"opt":{"city":"moscow"},"org":[{"id":"70000001027245041"}]});
+        </script>
+        <noscript>Виджет карты использует JavaScript. Включите его в настройках браузера.</noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div>
+      <h3>Контакты</h3>
+      <p>E-mail: <a href="mailto:6423800@mail.ru">6423800@mail.ru</a></p>
+      <p>Телефон: <a href="tel:+79100837777">8 (910) 083-77-77</a></p>
     </div>
-    <footer id="footer">
-        <ul>
-            <li class="s3">E-mail:<a href="mailto:6423800@mail.ru">6423800@mail.ru</a>
-            </li>
-            <li class="s3">Телефон:<a href="tel:8(910)083 77-77">8(910)083 77-77</a></li>
-        </ul>
-        <ul>
-            <li class="s3">
-                Режим работы:
-                <br> Ежедневно с 08:00 до 23:00
-            </li>
-        </ul>
-        <!-- <ul>
-                <li class="s2">
-                    Авторы иконок: Us and Up, Darius Dan, Freepik,
-                    <br> Muhammad Ali, Smashicons, Icon Pond, kmg design,<br> juicy_fish, Good Ware,Eucalyp, Victoruler, smalllikeart,<br> Rudiyana, surang, smalllikeart, bsd, Konkapp
-                </li>
-            </ul> -->
-    </footer>
+    <div>
+      <h3>Режим работы</h3>
+      <p>Ежедневно с 08:00 до 23:00</p>
+    </div>
+  </footer>
 
+  <script>
+    const P = 'images/imgonline-com-ua-Resize-';
+    const SHOPS = [
+      {c:'Одежда и обувь', t:'Одежда', i:'0cegGCRt8GleKNY7.png', s:[['Familia','https://www.famil.ru/'],['Мужская одежда'],['Женская одежда'],['Смешные цены','https://smeshnie-ceny.ru/']]},
+      {c:'Одежда и обувь', t:'Секонд-хэнд', i:'VIHkAbnw9YD.png', s:[['Столичный гардероб','https://s-garderob.ru/'],['Суперхенд','http://super-hand.su/']]},
+      {c:'Одежда и обувь', t:'Магазин белья и купальников', i:'l7KPuujJ8JRy.png', s:[['Бельё моё']]},
+      {c:'Одежда и обувь', t:'Магазин верхней одежды', i:'EzgMe4jimw.png', s:[['Магазин верхней одежды']]},
+      {c:'Одежда и обувь', t:'Магазин обуви', i:'12svEKfLSZHW8.png', s:[['Магазин обуви']]},
+      {c:'Одежда и обувь', t:'Магазин сумок и чемоданов', i:'ytfn9ndP5WHun4.png', s:[['Pola','https://www.pola.ru/']]},
+      {c:'Одежда и обувь', t:'Меховая компания', i:'rz6yPAfxBMEWGc.png', s:[['В шубе']]},
+      {c:'Одежда и обувь', t:'Трикотаж, трикотажные изделия', i:'H631H9gQYkT9wB2e.png', s:[['Магазин трикотажных изделий']]},
+      {c:'Красота и здоровье', t:'Парфюмерия и косметика', i:'xEOMXOkZmvvf.png', s:[['Магнит Косметик','https://magnitcosmetic.ru/'],['TianDe','https://tiande.ru/'],['Parfum Mastery']]},
+      {c:'Красота и здоровье', t:'Аптека', i:'MzmxUNpOEBvAk.png', s:[['Аптечество','https://aptechestvo.ru/']]},
+      {c:'Красота и здоровье', t:'Салон оптики', i:'kQ15t2Gq4OU4u.png', s:[['Гранд оптика','https://grand-opt.ru']]},
+      {c:'Красота и здоровье', t:'Парики, накладные пряди, волосы для наращивания', i:'3uyRd1Aqkg2zX.png', s:[['ШикПарик']]},
+      {c:'Еда и досуг', t:'Супермаркет', i:'LQua6HfpsNe.png', s:[['Атак','http://atak.testeam.ru/']]},
+      {c:'Еда и досуг', t:'Кофейня', i:'NEVXN98luPxp7rek.png', s:[['Cofix','https://cofix.global/ru-ru/main/moscow/']]},
+      {c:'Еда и досуг', t:'Аниме-магазин', i:'521DFASPcM4.png', s:[['Няпи: дакимакура, фигурки, манга','https://nyapi.ru/']]},
+      {c:'Еда и досуг', t:'Кальян-бар', i:'5Aw46IKlsEgaTLX.png', age:true, s:[['Альфа Лаундж','https://alphalounge.ru/']]},
+      {c:'Еда и досуг', t:'Лотереи', i:'PkHrLbFQm0s4wp.png', age:true, s:[['Столото','https://www.stoloto.ru/']]},
+      {c:'Еда и досуг', t:'Букмекерская контора', i:'YuN4RkCQadYBw.png', age:true, s:[['БЕТСИТИ','https://betcity.ru/']]},
+      {c:'Услуги', t:'Железнодорожные и авиабилеты', i:'IXwFb20wcK.png', s:[['Авиакассы']]},
+      {c:'Услуги', t:'Банк', i:'b9etdcgrXXbD9.png', s:[['Юнистрим','https://unistream.ru/']]},
+      {c:'Услуги', t:'Агентство недвижимости', i:'eP9kU66ty9xpVP8.png', s:[['Семейный очаг','http://s-ochag.ru/']]},
+      {c:'Услуги', t:'Ремонт одежды', i:'netoJiBHZhndukB (1).png', s:[['Ремонт одежды']]},
+      {c:'Услуги', t:'Ремонт часов', i:'b8wUMusrb47UP571.png', s:[['Shoes and key','https://master-sk.ru/']]},
+      {c:'Услуги', t:'Полиграфические услуги', i:'hdlTMOMEUC.png', s:[['Печатный сервис']]},
+      {c:'Услуги', t:'Фотоуслуги', i:'FN6s3WHIIIEXl.png', s:[['Фотоуслуги']]},
+      {c:'Услуги', t:'Строительная экспертиза и технадзор', i:'wr65fMRh7Atu.png', s:[['Экспертиза Строительства М']]},
+      {c:'Для дома и прочее', t:'Магазин ковров', i:'kPcU1BeKZBWr5I.png', s:[['1000 и 1 ковёр']]},
+      {c:'Для дома и прочее', t:'Шторы, карнизы', i:'oe9d3tFhL3Xv.png', s:[['Розавилла','https://ru.rozavilla.com/']]},
+      {c:'Для дома и прочее', t:'Товары для мобильных телефонов', i:'3UC2cwJbR2CmL.png', s:[['Магазин товаров для мобильных телефонов']]},
+      {c:'Для дома и прочее', t:'Религиозные товары', i:'zhlevENC2f5mPUQq.png', s:[['Хранитель']]}
+    ];
+
+    const grid = document.getElementById('grid');
+    const filtersEl = document.getElementById('filters');
+    const searchEl = document.getElementById('search');
+    const emptyEl = document.getElementById('empty');
+    const cats = ['Все', ...new Set(SHOPS.map(s => s.c))];
+    let active = 'Все';
+
+    function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+    function render() {
+      const q = searchEl.value.trim().toLowerCase();
+      const list = SHOPS.filter(s => (active === 'Все' || s.c === active) &&
+        (!q || (s.t + ' ' + s.s.map(x => x[0]).join(' ')).toLowerCase().includes(q)));
+      grid.innerHTML = list.map(s => `
+        <article class="card">
+          <img loading="lazy" src="${encodeURI(P + s.i)}" alt="${esc(s.t)}">
+          <h3>${esc(s.t)}${s.age ? ' <span class="age">18+</span>' : ''}</h3>
+          <p>${s.s.map(x => x[1] ? `<a href="${x[1]}" target="_blank" rel="noopener">${esc(x[0])}</a>` : esc(x[0])).join(', ')}</p>
+        </article>`).join('');
+      emptyEl.hidden = list.length > 0;
+    }
+
+    filtersEl.innerHTML = cats.map(c => `<button type="button" data-c="${c}" class="${c === active ? 'on' : ''}">${c}</button>`).join('');
+    filtersEl.addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      active = b.dataset.c;
+      [...filtersEl.children].forEach(x => x.classList.toggle('on', x === b));
+      render();
+    });
+    searchEl.addEventListener('input', render);
+    render();
+
+    const SL = ['4503599659366204_bd4e.jpeg', 'Pictureы.png', 'Picture1ыыpng.png'];
+    const slides = document.getElementById('slides');
+    const dots = document.getElementById('dots');
+    slides.innerHTML = SL.map((f, n) => `<img src="${encodeURI('images/' + f)}" alt="ТРЦ Авиатор, фото ${n + 1}" class="${n ? '' : 'on'}">`).join('');
+    dots.innerHTML = SL.map((_, n) => `<button type="button" aria-label="Слайд ${n + 1}" class="${n ? '' : 'on'}"></button>`).join('');
+    let cur = 0, timer;
+    function show(n) {
+      cur = (n + SL.length) % SL.length;
+      [...slides.children].forEach((x, k) => x.classList.toggle('on', k === cur));
+      [...dots.children].forEach((x, k) => x.classList.toggle('on', k === cur));
+    }
+    function auto() { clearInterval(timer); timer = setInterval(() => show(cur + 1), 5000); }
+    dots.addEventListener('click', e => { const i = [...dots.children].indexOf(e.target); if (i >= 0) { show(i); auto(); } });
+    auto();
+  </script>
 </body>
-
-
 </html>
