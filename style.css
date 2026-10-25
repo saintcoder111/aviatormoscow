@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&subset=cyrillic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 :root {
   --bg: #111111;
@@ -10,18 +10,17 @@
   --mono: var(--font);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font) !important; }
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font);
   font-size: 16px;
   line-height: 1.55;
 }
 
-button, input { font-family: var(--font); }
+input::placeholder { font-family: var(--font); }
 
 a { color: var(--accent); }
 
@@ -58,7 +57,7 @@ h1 { font-size: clamp(40px, 8.5vw, 92px); line-height: 1.05; font-weight: 800; l
 h2 { font-size: 24px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 
 #search {
-  width: 100%; max-width: 420px; padding: 10px 12px; font: inherit; font-size: 15px;
+  width: 100%; max-width: 420px; padding: 10px 12px; font-size: 15px;
   color: var(--text); background: transparent;
   border: 1px solid var(--line); border-radius: 2px; outline: none;
   transition: border-color .2s, max-width .3s;
@@ -66,7 +65,7 @@ h2 { font-size: 24px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12p
 #search:focus { border-color: var(--accent); max-width: 520px; }
 .cats { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 16px 0 8px; }
 .cats button {
-  position: relative; font: inherit; font-size: 13px; font-weight: 500; padding: 4px 0; cursor: pointer;
+  position: relative; font-size: 13px; font-weight: 500; padding: 4px 0; cursor: pointer;
   color: var(--muted); background: none; border: 0;
   transition: color .2s;
 }
