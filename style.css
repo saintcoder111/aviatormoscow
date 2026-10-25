@@ -1,10 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&subset=cyrillic&display=swap");
+
 :root {
   --bg: #111111;
   --text: #d9d6cf;
   --muted: #8a877f;
   --line: #2b2b2b;
   --accent: #e8a33d;
-  --mono: ui-monospace, "SF Mono", Consolas, "Courier New", monospace;
+  --font: "Montserrat", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --mono: var(--font);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,10 +16,12 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-family: var(--font);
   font-size: 16px;
   line-height: 1.55;
 }
+
+button, input { font-family: var(--font); }
 
 a { color: var(--accent); }
 
@@ -27,19 +32,19 @@ a { color: var(--accent); }
 }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .top nav { display: flex; gap: 22px; }
-.top nav a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
 .top nav a:hover { color: var(--accent); }
 
 main { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
 .intro { padding: 64px 0 36px; }
-.kicker { font-family: var(--mono); font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
-h1 { font-size: clamp(48px, 10vw, 104px); line-height: 1; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; margin: 14px 0; }
-.sub { max-width: 520px; color: var(--muted); font-size: 18px; }
+.kicker { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; }
+h1 { font-size: clamp(40px, 8.5vw, 92px); line-height: 1.05; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; margin: 14px 0; }
+.sub { max-width: 520px; color: var(--muted); font-size: 17px; }
 .facts { display: flex; flex-wrap: wrap; gap: 0; margin-top: 36px; border-top: 1px solid var(--line); }
 .facts div { flex: 1 1 200px; padding: 14px 20px 14px 0; border-bottom: 1px solid var(--line); }
-.facts dt { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-.facts dd { margin-top: 2px; }
+.facts dt { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+.facts dd { margin-top: 2px; font-weight: 500; }
 
 .slider { margin: 8px 0 0; }
 .slides { position: relative; aspect-ratio: 16 / 7; background: #1a1a1a; overflow: hidden; }
@@ -50,10 +55,10 @@ h1 { font-size: clamp(48px, 10vw, 104px); line-height: 1; font-weight: 700; lett
 .dots button.on { background: var(--accent); }
 
 .block { padding: 64px 0 0; }
-h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+h2 { font-size: 24px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 
 #search {
-  width: 100%; max-width: 420px; padding: 10px 12px; font: inherit;
+  width: 100%; max-width: 420px; padding: 10px 12px; font: inherit; font-size: 15px;
   color: var(--text); background: transparent;
   border: 1px solid var(--line); border-radius: 2px; outline: none;
   transition: border-color .2s, max-width .3s;
@@ -61,7 +66,7 @@ h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12p
 #search:focus { border-color: var(--accent); max-width: 520px; }
 .cats { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 16px 0 8px; }
 .cats button {
-  position: relative; font: inherit; font-size: 14px; padding: 4px 0; cursor: pointer;
+  position: relative; font: inherit; font-size: 13px; font-weight: 500; padding: 4px 0; cursor: pointer;
   color: var(--muted); background: none; border: 0;
   transition: color .2s;
 }
@@ -74,7 +79,7 @@ h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12p
 .cats button.on { color: var(--text); }
 .cats button.on::after { transform: scaleX(1); }
 
-.cat { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin: 28px 0 6px; }
+.cat { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; margin: 28px 0 6px; }
 .row {
   display: grid; grid-template-columns: 44px minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; align-items: center;
   padding: 10px 0; border-bottom: 1px solid var(--line);
@@ -82,9 +87,9 @@ h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12p
 }
 .row:hover { background: #171717; padding-left: 8px; }
 .row img { width: 44px; height: 44px; object-fit: contain; background: #e9e6df; padding: 4px; }
-.row .t { font-weight: 600; }
-.row .b { color: var(--muted); font-size: 15px; }
-.age { margin-left: 8px; font-family: var(--mono); font-size: 11px; font-weight: 400; padding: 1px 5px; border: 1px solid var(--muted); color: var(--muted); }
+.row .t { font-weight: 600; font-size: 15px; }
+.row .b { color: var(--muted); font-size: 14px; }
+.age { margin-left: 8px; font-size: 11px; font-weight: 500; padding: 1px 5px; border: 1px solid var(--muted); color: var(--muted); }
 .none { color: var(--muted); padding: 24px 0; animation: appear .35s ease both; }
 
 @keyframes appear {
@@ -107,7 +112,7 @@ h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12p
 
 .adv { padding-left: 22px; max-width: 760px; }
 .adv li { padding: 8px 0 8px 6px; }
-.adv li::marker { font-family: var(--mono); color: var(--accent); }
+.adv li::marker { font-weight: 600; color: var(--accent); }
 
 .links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 16px; }
 .map { border: 1px solid var(--line); padding: 6px; color: var(--muted); }
@@ -118,11 +123,11 @@ footer {
   max-width: 1100px; margin: 72px auto 0; padding: 32px 20px 48px;
   border-top: 1px solid var(--line);
 }
-footer h3 { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+footer h3 { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
 
 @media (max-width: 680px) {
   .top nav { gap: 14px; }
-  .top nav a { font-size: 13px; }
+  .top nav a { font-size: 12px; }
   .intro { padding-top: 40px; }
   .slides { aspect-ratio: 4 / 3; }
   .row { grid-template-columns: 44px minmax(0, 1fr); }
