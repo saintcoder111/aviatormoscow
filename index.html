@@ -3,76 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ТРЦ «Авиатор» — более 30 магазинов у метро Тушинская</title>
-  <meta name="description" content="ТРЦ «Авиатор» в Москве: более 30 магазинов, парковка на 130 машин, 500 метров от м. Тушинская. Аренда торговых площадей.">
-  <meta name="theme-color" content="#0d0f14">
-  <meta property="og:title" content="ТРЦ «Авиатор»">
-  <meta property="og:description" content="Более 30 магазинов у метро Тушинская. Ежедневно с 08:00 до 23:00.">
-  <meta property="og:type" content="website">
+  <title>ТРЦ «Авиатор» — Москва, Тушино</title>
+  <meta name="description" content="ТРЦ «Авиатор» в Москве: более 30 магазинов, парковка на 130 мест, 500 метров от метро Тушинская. Аренда торговых площадей.">
+  <meta name="theme-color" content="#111111">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#top"><img src="images/logo.svg" alt="Логотип ТРЦ Авиатор" width="40" height="40"><span>Авиатор</span></a>
+  <header class="top">
+    <a class="logo" href="#top"><img src="images/logo.svg" alt="" width="34" height="34">Авиатор</a>
     <nav>
       <a href="#shops">Магазины</a>
-      <a href="#rent">Арендаторам</a>
+      <a href="#rent">Аренда</a>
       <a href="#map">Как добраться</a>
       <a href="#contacts">Контакты</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <h1>ТРЦ «Авиатор»</h1>
-      <p>Более 30 магазинов в шаговой доступности от метро Тушинская</p>
-      <div class="hero-badges">
-        <span>Ежедневно 08:00–23:00</span>
-        <span>Парковка на 130 мест</span>
-        <span>500 м от м. Тушинская</span>
-      </div>
+    <section class="intro">
+      <p class="kicker">Торгово-развлекательный центр · Москва, Тушино</p>
+      <h1>Авиатор</h1>
+      <p class="sub">Больше тридцати магазинов и услуг в пяти минутах от метро Тушинская.</p>
+      <dl class="facts">
+        <div><dt>Работаем</dt><dd>каждый день, 08:00–23:00</dd></div>
+        <div><dt>Парковка</dt><dd>130 мест</dd></div>
+        <div><dt>До метро</dt><dd>500 метров</dd></div>
+      </dl>
     </section>
 
-    <section class="slider" aria-label="Фотографии ТРЦ">
+    <section class="slider" aria-label="Фотографии">
       <div class="slides" id="slides"></div>
       <div class="dots" id="dots"></div>
     </section>
 
-    <section id="shops" class="section">
+    <section id="shops" class="block">
       <h2>Магазины и услуги</h2>
-      <div class="tools">
-        <input id="search" type="search" placeholder="Поиск: одежда, аптека, кофе…" aria-label="Поиск по магазинам">
-        <div class="filters" id="filters"></div>
-      </div>
-      <div class="grid" id="grid"></div>
-      <p class="empty" id="empty" hidden>Ничего не найдено. Попробуйте другой запрос.</p>
-      <noscript><p class="empty">Для списка магазинов включите JavaScript.</p></noscript>
+      <input id="search" type="search" placeholder="Найти магазин" aria-label="Найти магазин">
+      <div class="cats" id="cats"></div>
+      <div id="board"></div>
+      <p class="none" id="none" hidden>Ничего не нашли.</p>
+      <noscript><p class="none">Список магазинов работает с включённым JavaScript.</p></noscript>
     </section>
 
-    <section id="rent" class="section">
+    <section id="rent" class="block">
       <h2>Арендаторам</h2>
-      <p class="lead">Наши преимущества:</p>
-      <div class="adv">
-        <div class="adv-item"><b>Выгодное расположение</b><p>500 метров от м. Тушинская, ж/д станции Тушино и автостанции Тушинская. Первая линия домов.</p></div>
-        <div class="adv-item"><b>5000 человек в час</b><p>Густонаселённый район и высокий пешеходный трафик.</p></div>
-        <div class="adv-item"><b>Наружная реклама</b><p>Удобно разместить рекламу на ограждении, на здании и на билборде у оживлённой улицы с удобным подъездом.</p></div>
-        <div class="adv-item"><b>Парковка</b><p>130 машиномест для ваших клиентов.</p></div>
-      </div>
+      <ol class="adv">
+        <li>Выгодное расположение: 500 метров от метро Тушинская, железнодорожной станции Тушино и автостанции Тушинская, первая линия домов.</li>
+        <li>Густонаселённый район: пешеходный поток до 5000 человек в час.</li>
+        <li>Наружная реклама: можно разместить на ограждении, на здании и на билборде у улицы с большим потоком машин и удобным подъездом.</li>
+        <li>Парковка на 130 машиномест.</li>
+      </ol>
     </section>
 
-    <section id="map" class="section">
+    <section id="map" class="block">
       <h2>Как добраться</h2>
-      <div class="map-links">
+      <p class="links">
         <a href="https://2gis.ru/moscow/firm/70000001027245041" target="_blank" rel="noopener">Открыть в 2ГИС</a>
-        <a href="https://2gis.ru/moscow/firm/70000001027245041/photos/70000001027245041" target="_blank" rel="noopener">Фотографии</a>
-      </div>
-      <div class="map-box">
+        <a href="https://2gis.ru/moscow/firm/70000001027245041/photos/70000001027245041" target="_blank" rel="noopener">Фотографии в 2ГИС</a>
+      </p>
+      <div class="map">
         <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
         <script charset="utf-8">
-          new DGWidgetLoader({"width":"100%","height":480,"borderColor":"#2a2f3a","pos":{"lat":55.82779320816383,"lon":37.44488239288331,"zoom":16},"opt":{"city":"moscow"},"org":[{"id":"70000001027245041"}]});
+          new DGWidgetLoader({"width":"100%","height":480,"borderColor":"#2b2b2b","pos":{"lat":55.82779320816383,"lon":37.44488239288331,"zoom":16},"opt":{"city":"moscow"},"org":[{"id":"70000001027245041"}]});
         </script>
-        <noscript>Виджет карты использует JavaScript. Включите его в настройках браузера.</noscript>
+        <noscript>Карта работает с включённым JavaScript.</noscript>
       </div>
     </section>
   </main>
@@ -80,11 +75,11 @@
   <footer id="contacts">
     <div>
       <h3>Контакты</h3>
-      <p>E-mail: <a href="mailto:6423800@mail.ru">6423800@mail.ru</a></p>
-      <p>Телефон: <a href="tel:+79100837777">8 (910) 083-77-77</a></p>
+      <p><a href="mailto:6423800@mail.ru">6423800@mail.ru</a></p>
+      <p><a href="tel:+79100837777">8 (910) 083-77-77</a></p>
     </div>
     <div>
-      <h3>Режим работы</h3>
+      <h3>Часы работы</h3>
       <p>Ежедневно с 08:00 до 23:00</p>
     </div>
   </footer>
@@ -94,63 +89,68 @@
     const SHOPS = [
       {c:'Одежда и обувь', t:'Одежда', i:'0cegGCRt8GleKNY7.png', s:[['Familia','https://www.famil.ru/'],['Мужская одежда'],['Женская одежда'],['Смешные цены','https://smeshnie-ceny.ru/']]},
       {c:'Одежда и обувь', t:'Секонд-хэнд', i:'VIHkAbnw9YD.png', s:[['Столичный гардероб','https://s-garderob.ru/'],['Суперхенд','http://super-hand.su/']]},
-      {c:'Одежда и обувь', t:'Магазин белья и купальников', i:'l7KPuujJ8JRy.png', s:[['Бельё моё']]},
-      {c:'Одежда и обувь', t:'Магазин верхней одежды', i:'EzgMe4jimw.png', s:[['Магазин верхней одежды']]},
-      {c:'Одежда и обувь', t:'Магазин обуви', i:'12svEKfLSZHW8.png', s:[['Магазин обуви']]},
-      {c:'Одежда и обувь', t:'Магазин сумок и чемоданов', i:'ytfn9ndP5WHun4.png', s:[['Pola','https://www.pola.ru/']]},
-      {c:'Одежда и обувь', t:'Меховая компания', i:'rz6yPAfxBMEWGc.png', s:[['В шубе']]},
-      {c:'Одежда и обувь', t:'Трикотаж, трикотажные изделия', i:'H631H9gQYkT9wB2e.png', s:[['Магазин трикотажных изделий']]},
+      {c:'Одежда и обувь', t:'Белье и купальники', i:'l7KPuujJ8JRy.png', s:[['Бельё моё']]},
+      {c:'Одежда и обувь', t:'Верхняя одежда', i:'EzgMe4jimw.png', s:[['Магазин верхней одежды']]},
+      {c:'Одежда и обувь', t:'Обувь', i:'12svEKfLSZHW8.png', s:[['Магазин обуви']]},
+      {c:'Одежда и обувь', t:'Сумки и чемоданы', i:'ytfn9ndP5WHun4.png', s:[['Pola','https://www.pola.ru/']]},
+      {c:'Одежда и обувь', t:'Меха', i:'rz6yPAfxBMEWGc.png', s:[['В шубе']]},
+      {c:'Одежда и обувь', t:'Трикотаж', i:'H631H9gQYkT9wB2e.png', s:[['Магазин трикотажных изделий']]},
       {c:'Красота и здоровье', t:'Парфюмерия и косметика', i:'xEOMXOkZmvvf.png', s:[['Магнит Косметик','https://magnitcosmetic.ru/'],['TianDe','https://tiande.ru/'],['Parfum Mastery']]},
       {c:'Красота и здоровье', t:'Аптека', i:'MzmxUNpOEBvAk.png', s:[['Аптечество','https://aptechestvo.ru/']]},
-      {c:'Красота и здоровье', t:'Салон оптики', i:'kQ15t2Gq4OU4u.png', s:[['Гранд оптика','https://grand-opt.ru']]},
-      {c:'Красота и здоровье', t:'Парики, накладные пряди, волосы для наращивания', i:'3uyRd1Aqkg2zX.png', s:[['ШикПарик']]},
+      {c:'Красота и здоровье', t:'Оптика', i:'kQ15t2Gq4OU4u.png', s:[['Гранд оптика','https://grand-opt.ru']]},
+      {c:'Красота и здоровье', t:'Парики и волосы для наращивания', i:'3uyRd1Aqkg2zX.png', s:[['ШикПарик']]},
       {c:'Еда и досуг', t:'Супермаркет', i:'LQua6HfpsNe.png', s:[['Атак','http://atak.testeam.ru/']]},
       {c:'Еда и досуг', t:'Кофейня', i:'NEVXN98luPxp7rek.png', s:[['Cofix','https://cofix.global/ru-ru/main/moscow/']]},
       {c:'Еда и досуг', t:'Аниме-магазин', i:'521DFASPcM4.png', s:[['Няпи: дакимакура, фигурки, манга','https://nyapi.ru/']]},
       {c:'Еда и досуг', t:'Кальян-бар', i:'5Aw46IKlsEgaTLX.png', age:true, s:[['Альфа Лаундж','https://alphalounge.ru/']]},
       {c:'Еда и досуг', t:'Лотереи', i:'PkHrLbFQm0s4wp.png', age:true, s:[['Столото','https://www.stoloto.ru/']]},
       {c:'Еда и досуг', t:'Букмекерская контора', i:'YuN4RkCQadYBw.png', age:true, s:[['БЕТСИТИ','https://betcity.ru/']]},
-      {c:'Услуги', t:'Железнодорожные и авиабилеты', i:'IXwFb20wcK.png', s:[['Авиакассы']]},
+      {c:'Услуги', t:'Ж/д и авиабилеты', i:'IXwFb20wcK.png', s:[['Авиакассы']]},
       {c:'Услуги', t:'Банк', i:'b9etdcgrXXbD9.png', s:[['Юнистрим','https://unistream.ru/']]},
       {c:'Услуги', t:'Агентство недвижимости', i:'eP9kU66ty9xpVP8.png', s:[['Семейный очаг','http://s-ochag.ru/']]},
       {c:'Услуги', t:'Ремонт одежды', i:'netoJiBHZhndukB (1).png', s:[['Ремонт одежды']]},
       {c:'Услуги', t:'Ремонт часов', i:'b8wUMusrb47UP571.png', s:[['Shoes and key','https://master-sk.ru/']]},
-      {c:'Услуги', t:'Полиграфические услуги', i:'hdlTMOMEUC.png', s:[['Печатный сервис']]},
+      {c:'Услуги', t:'Полиграфия', i:'hdlTMOMEUC.png', s:[['Печатный сервис']]},
       {c:'Услуги', t:'Фотоуслуги', i:'FN6s3WHIIIEXl.png', s:[['Фотоуслуги']]},
       {c:'Услуги', t:'Строительная экспертиза и технадзор', i:'wr65fMRh7Atu.png', s:[['Экспертиза Строительства М']]},
-      {c:'Для дома и прочее', t:'Магазин ковров', i:'kPcU1BeKZBWr5I.png', s:[['1000 и 1 ковёр']]},
-      {c:'Для дома и прочее', t:'Шторы, карнизы', i:'oe9d3tFhL3Xv.png', s:[['Розавилла','https://ru.rozavilla.com/']]},
-      {c:'Для дома и прочее', t:'Товары для мобильных телефонов', i:'3UC2cwJbR2CmL.png', s:[['Магазин товаров для мобильных телефонов']]},
+      {c:'Для дома и прочее', t:'Ковры', i:'kPcU1BeKZBWr5I.png', s:[['1000 и 1 ковёр']]},
+      {c:'Для дома и прочее', t:'Шторы и карнизы', i:'oe9d3tFhL3Xv.png', s:[['Розавилла','https://ru.rozavilla.com/']]},
+      {c:'Для дома и прочее', t:'Товары для телефонов', i:'3UC2cwJbR2CmL.png', s:[['Магазин товаров для мобильных телефонов']]},
       {c:'Для дома и прочее', t:'Религиозные товары', i:'zhlevENC2f5mPUQq.png', s:[['Хранитель']]}
     ];
 
-    const grid = document.getElementById('grid');
-    const filtersEl = document.getElementById('filters');
+    const board = document.getElementById('board');
+    const catsEl = document.getElementById('cats');
     const searchEl = document.getElementById('search');
-    const emptyEl = document.getElementById('empty');
-    const cats = ['Все', ...new Set(SHOPS.map(s => s.c))];
-    let active = 'Все';
+    const noneEl = document.getElementById('none');
+    const CATS = [...new Set(SHOPS.map(s => s.c))];
+    let active = '';
 
-    function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+    const esc = t => { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; };
+
+    function row(s) {
+      const brands = s.s.map(x => x[1] ? `<a href="${x[1]}" target="_blank" rel="noopener">${esc(x[0])}</a>` : esc(x[0])).join(', ');
+      return `<div class="row"><img loading="lazy" src="${encodeURI(P + s.i)}" alt=""><div class="t">${esc(s.t)}${s.age ? '<span class="age">18+</span>' : ''}</div><div class="b">${brands}</div></div>`;
+    }
 
     function render() {
       const q = searchEl.value.trim().toLowerCase();
-      const list = SHOPS.filter(s => (active === 'Все' || s.c === active) &&
-        (!q || (s.t + ' ' + s.s.map(x => x[0]).join(' ')).toLowerCase().includes(q)));
-      grid.innerHTML = list.map(s => `
-        <article class="card">
-          <img loading="lazy" src="${encodeURI(P + s.i)}" alt="${esc(s.t)}">
-          <h3>${esc(s.t)}${s.age ? ' <span class="age">18+</span>' : ''}</h3>
-          <p>${s.s.map(x => x[1] ? `<a href="${x[1]}" target="_blank" rel="noopener">${esc(x[0])}</a>` : esc(x[0])).join(', ')}</p>
-        </article>`).join('');
-      emptyEl.hidden = list.length > 0;
+      let html = '', n = 0;
+      CATS.filter(c => !active || c === active).forEach(c => {
+        const list = SHOPS.filter(s => s.c === c && (!q || (s.t + ' ' + s.s.map(x => x[0]).join(' ')).toLowerCase().includes(q)));
+        if (!list.length) return;
+        n += list.length;
+        html += `<h3 class="cat">${c}</h3>` + list.map(row).join('');
+      });
+      board.innerHTML = html;
+      noneEl.hidden = n > 0;
     }
 
-    filtersEl.innerHTML = cats.map(c => `<button type="button" data-c="${c}" class="${c === active ? 'on' : ''}">${c}</button>`).join('');
-    filtersEl.addEventListener('click', e => {
+    catsEl.innerHTML = ['Все', ...CATS].map((c, k) => `<button type="button" data-c="${k ? c : ''}" class="${k ? '' : 'on'}">${c}</button>`).join('');
+    catsEl.addEventListener('click', e => {
       const b = e.target.closest('button'); if (!b) return;
       active = b.dataset.c;
-      [...filtersEl.children].forEach(x => x.classList.toggle('on', x === b));
+      [...catsEl.children].forEach(x => x.classList.toggle('on', x === b));
       render();
     });
     searchEl.addEventListener('input', render);
@@ -160,7 +160,7 @@
     const slides = document.getElementById('slides');
     const dots = document.getElementById('dots');
     slides.innerHTML = SL.map((f, n) => `<img src="${encodeURI('images/' + f)}" alt="ТРЦ Авиатор, фото ${n + 1}" class="${n ? '' : 'on'}">`).join('');
-    dots.innerHTML = SL.map((_, n) => `<button type="button" aria-label="Слайд ${n + 1}" class="${n ? '' : 'on'}"></button>`).join('');
+    dots.innerHTML = SL.map((_, n) => `<button type="button" aria-label="Фото ${n + 1}" class="${n ? '' : 'on'}"></button>`).join('');
     let cur = 0, timer;
     function show(n) {
       cur = (n + SL.length) % SL.length;
