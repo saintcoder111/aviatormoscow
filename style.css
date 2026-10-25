@@ -27,7 +27,7 @@ a { color: var(--accent); }
 }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .top nav { display: flex; gap: 22px; }
-.top nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
 .top nav a:hover { color: var(--accent); }
 
 main { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -46,7 +46,7 @@ h1 { font-size: clamp(48px, 10vw, 104px); line-height: 1; font-weight: 700; lett
 .slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
 .slides img.on { opacity: 1; }
 .dots { display: flex; gap: 6px; margin-top: 10px; }
-.dots button { width: 28px; height: 3px; border: 0; background: var(--line); cursor: pointer; }
+.dots button { width: 28px; height: 3px; border: 0; background: var(--line); cursor: pointer; transition: background .3s; }
 .dots button.on { background: var(--accent); }
 
 .block { padding: 64px 0 0; }
@@ -56,26 +56,54 @@ h2 { font-size: 26px; font-weight: 600; margin-bottom: 20px; padding-bottom: 12p
   width: 100%; max-width: 420px; padding: 10px 12px; font: inherit;
   color: var(--text); background: transparent;
   border: 1px solid var(--line); border-radius: 2px; outline: none;
+  transition: border-color .2s, max-width .3s;
 }
-#search:focus { border-color: var(--accent); }
+#search:focus { border-color: var(--accent); max-width: 520px; }
 .cats { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 16px 0 8px; }
 .cats button {
-  font: inherit; font-size: 14px; padding: 4px 0; cursor: pointer;
-  color: var(--muted); background: none; border: 0; border-bottom: 2px solid transparent;
+  position: relative; font: inherit; font-size: 14px; padding: 4px 0; cursor: pointer;
+  color: var(--muted); background: none; border: 0;
+  transition: color .2s;
+}
+.cats button::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: var(--accent); transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
 }
 .cats button:hover { color: var(--text); }
-.cats button.on { color: var(--text); border-bottom-color: var(--accent); }
+.cats button.on { color: var(--text); }
+.cats button.on::after { transform: scaleX(1); }
 
 .cat { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin: 28px 0 6px; }
 .row {
   display: grid; grid-template-columns: 44px minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; align-items: center;
   padding: 10px 0; border-bottom: 1px solid var(--line);
+  transition: background .2s, padding-left .2s;
 }
+.row:hover { background: #171717; padding-left: 8px; }
 .row img { width: 44px; height: 44px; object-fit: contain; background: #e9e6df; padding: 4px; }
 .row .t { font-weight: 600; }
 .row .b { color: var(--muted); font-size: 15px; }
 .age { margin-left: 8px; font-family: var(--mono); font-size: 11px; font-weight: 400; padding: 1px 5px; border: 1px solid var(--muted); color: var(--muted); }
-.none { color: var(--muted); padding: 24px 0; }
+.none { color: var(--muted); padding: 24px 0; animation: appear .35s ease both; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+#board { min-height: 120px; }
+#board > * { animation: appear .4s ease both; }
+#board > :nth-child(1) { animation-delay: 0ms; }
+#board > :nth-child(2) { animation-delay: 30ms; }
+#board > :nth-child(3) { animation-delay: 60ms; }
+#board > :nth-child(4) { animation-delay: 90ms; }
+#board > :nth-child(5) { animation-delay: 120ms; }
+#board > :nth-child(6) { animation-delay: 150ms; }
+#board > :nth-child(7) { animation-delay: 180ms; }
+#board > :nth-child(8) { animation-delay: 210ms; }
+#board > :nth-child(9) { animation-delay: 240ms; }
+#board > :nth-child(10) { animation-delay: 270ms; }
+#board > :nth-child(n+11) { animation-delay: 300ms; }
 
 .adv { padding-left: 22px; max-width: 760px; }
 .adv li { padding: 8px 0 8px 6px; }
@@ -99,4 +127,9 @@ footer h3 { font-family: var(--mono); font-size: 12px; font-weight: 400; color: 
   .slides { aspect-ratio: 4 / 3; }
   .row { grid-template-columns: 44px minmax(0, 1fr); }
   .row .b { grid-column: 2; margin-top: -8px; }
+  .row:hover { padding-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
